@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <IsPackable>false</IsPackable>
+    <GenerateProgramFile>false</GenerateProgramFile>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Point.fs" />
+    <Compile Include="Lagrange.fs" />
+    <Compile Include="Linear.fs" />
+    <Compile Include="Newton.fs" />
+    <Compile Include="Streams.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+</Project>
