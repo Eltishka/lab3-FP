@@ -14,7 +14,8 @@ type InterpolatedFunction = {
 
 let private addSection lastPoint point1 interFunc =
     let a = (point1.Y - lastPoint.Y) / (point1.X - lastPoint.X)
-    let b = lastPoint.Y - lastPoint.X * a  // Упрощённая формула
+    let b = lastPoint.Y - lastPoint.X * a
+    
     let newSection = {
         A = a
         B = b
