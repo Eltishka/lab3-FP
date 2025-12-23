@@ -76,7 +76,7 @@ let runAlg (algs: Algorithm list) (step: decimal) (points: seq<Point>) (n: int) 
             runAllAlgs algs x window (i + 1) (Array.append acc [| {Point = {X = x; Y = f x}; Algorithm = algs.[i]} |])
         
     let windows = points |> slidingWindows n |> Seq.filter(fun window -> List.length window = n) |> Seq.cache
-    let start = (points |> Seq.head).X
+    let start = (windows |> Seq.head |> List.head).X 
     let seqPoints = genPoints step start |> Seq.cache
 
     let rec processWindows (remainingWindows: seq<Point list>) (lastX: decimal) (acc: seq<PointWithAlgo[]>) =
